@@ -1,5 +1,6 @@
 import React, { Component } from 'react';  
 import First from './First';
+import Formex from './Formex';
 import Person from './Person';
 class App extends Component{  
    render(){  
@@ -12,6 +13,7 @@ class App extends Component{  
       var  i = 5;  
       return (  
          <div> 
+  <Formex/>
   <Person name="Patil"/>
   <First value="Srini"/> 
   <First value="Welcome to Apsire"/> 

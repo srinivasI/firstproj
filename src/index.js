@@ -5,9 +5,11 @@ import App from './App';
 import First from './First';
 import reportWebVitals from './reportWebVitals';
 import Person from './Person';
+ import Formex from './Formex';
+import Eventex from './Eventex';
 const myname="Srinivas Ippili";
 ReactDOM.render(
-    <App/>,
+    <Eventex/>,
   document.getElementById('srini')
 );
 
