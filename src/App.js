@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';  
+import First from './First';
+import Person from './Person';
+class App extends Component{  
+   render(){  
+	var myStyle = {  
+         fontSize: 80,  
+         fontFamily: 'Courier',  
+         color: 'red'  
+      }  
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      var  i = 5;  
+      return (  
+         <div> 
+  <Person name="Patil"/>
+  <First value="Srini"/> 
+  <First value="Welcome to Apsire"/> 
+		<div style={myStyle}>My Style content</div>
+            <h1>{i === 5 ? 'True!' : 'False!'}</h1>  
+         </div>  
+      );  
+   }  
+}  
+export default App;  
