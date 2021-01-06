@@ -7,9 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import Person from './Person';
  import Formex from './Formex';
 import Eventex from './Eventex';
+import Formex2 from './Formex2';
+import Hookex from './Hookex';
+import Stateex from './Stateex';
+import Stateex2 from './Stateex2';
 const myname="Srinivas Ippili";
-ReactDOM.render(
-    <Eventex/>,
+ReactDOM.render(<React.Fragment><Formex2/><Eventex/>
+    <Hookex myname="Patil"/><Stateex/><Stateex2/></React.Fragment>,
   document.getElementById('srini')
 );
 
