@@ -11,9 +11,9 @@ import Formex2 from './Formex2';
 import Hookex from './Hookex';
 import Stateex from './Stateex';
 import Stateex2 from './Stateex2';
+import Lifecycle from './Lifecycle';
 const myname="Srinivas Ippili";
-ReactDOM.render(<React.Fragment><Formex2/><Eventex/>
-    <Hookex myname="Patil"/><Stateex/><Stateex2/></React.Fragment>,
+ReactDOM.render(<><Lifecycle/></>,
   document.getElementById('srini')
 );
 
