@@ -1,26 +1,30 @@
-import React, { Component } from 'react';  
-import First from './First';
-import Formex from './Formex';
-import Person from './Person';
-class App extends Component{  
-   render(){  
-	var myStyle = {  
-         fontSize: 80,  
-         fontFamily: 'Courier',  
-         color: 'red'  
-      }  
+import React, {Component} from 'react';
+import './App.css';
+import styled, { css } from "styled-components";
+class App extends Component{
 
-      var  i = 5;  
-      return (  
-         <div> 
-  <Formex/>
-  <Person name="Patil"/>
-  <First value="Srini"/> 
-  <First value="Welcome to Apsire"/> 
-		<div style={myStyle}>My Style content</div>
-            <h1>{i === 5 ? 'True!' : 'False!'}</h1>  
-         </div>  
-      );  
-   }  
-}  
-export default App;  
+render(){
+  const Button = styled.button`
+  display: inline-block;
+  color: blue;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  display: block;
+`;
+
+const ReversedButton = props => <Button {...props} children={props.children.split('').reverse()} />
+
+return (
+  <div>
+    <Button>Normal Button </Button>
+    <Button as={ReversedButton}>Custom Button with Normal Button styles</Button>
+  
+  </div>
+)
+}
+}
+
+export default App;

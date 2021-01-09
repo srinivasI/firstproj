@@ -1,4 +1,5 @@
 import React from 'react';
+import './Formex.css';
 class Formex extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +21,8 @@ class Formex extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
+                <h2 className="mycl1">MY First Form</h2>
+                <label className="mycl1">
                     Name:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </label>

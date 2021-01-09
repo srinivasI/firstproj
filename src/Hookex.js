@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-
+import './Formex.css';
 const Hookex = (props) => {
     return (
-        <div><h2>{props.myname}</h2><Headline /></div>
+        <><h2>{props.myname}</h2><Headline /></>
     );
 };
 

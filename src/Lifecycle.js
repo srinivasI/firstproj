@@ -35,7 +35,7 @@ class Lifecycle extends React.Component {
      }
     render() {
         return (
-           <div>
+           <div style={{color:'red',margin:10, border:'2px solid green',padding:20}}>
               <h3>Hello Mounting Lifecycle Methods!</h3>
               
            </div>
