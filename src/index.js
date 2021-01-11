@@ -18,9 +18,23 @@ import Mycssmod from './Mycssmod';
 import Mytable from './Mytable';
 import Register from './Register';
 import LoginForm from './LoginForm';
+import Toggleex from './Toggelex';
+import AllEvent from './AllEvent';
+function ActionLink() {  
+  function handleClick(e) {  
+      e.preventDefault();  
+      console.log('You had clicked a Link.'); 
+      alert("Click me button called .hi") 
+  }  
+  return (  
+      <a href="#" onClick={handleClick}>  
+            Click_Me  
+      </a>  
+  );  
+} 
 const myname = "Srinivas Ippili";
 ReactDOM.render(<div style={{  margin: 10, border: '2px solid green', padding: 20 }}>
-  <LoginForm/><Register/><Mytable/><Mycssmod/><App/><Formex /> <Hookex/> <Greeting/>
+ <App/><AllEvent/><ActionLink/>
   </div>,
   document.getElementById('srini')
 );

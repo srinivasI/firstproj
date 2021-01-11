@@ -1,30 +1,25 @@
-import React, {Component} from 'react';
-import './App.css';
-import styled, { css } from "styled-components";
-class App extends Component{
-
-render(){
-  const Button = styled.button`
-  display: inline-block;
-  color: blue;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-  display: block;
-`;
-
-const ReversedButton = props => <Button {...props} children={props.children.split('').reverse()} />
-
-return (
-  <div>
-    <Button>Normal Button </Button>
-    <Button as={ReversedButton}>Custom Button with Normal Button styles</Button>
-  
-  </div>
-)
-}
-}
-
-export default App;
+import React, { Component } from 'react';  
+class App extends React.Component {  
+    constructor(props) {  
+        super(props);  
+        this.state = {  
+            companyName: ''  
+        };  
+    }  
+    changeText(event) {  
+        this.setState({  
+            companyName: event.target.value  
+        });  
+    }  
+    render() {  
+        return (  
+            <div>  
+                <h2>Simple Event Example</h2>  
+                <label htmlFor="name">Enter company name: </label>  
+                <input type="text" id="companyName" onChange={this.changeText.bind(this)}/>  
+                <h4>You entered: { this.state.companyName }</h4>  
+            </div>  
+        );  
+    }  
+}  
+export default App; 
