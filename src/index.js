@@ -20,6 +20,54 @@ import Register from './Register';
 import LoginForm from './LoginForm';
 import Toggleex from './Toggelex';
 import AllEvent from './AllEvent';
+import { Route, Link,NavLink, BrowserRouter as Router,Switch } from 'react-router-dom';
+import Users from './Users';
+import List from './List';
+import Notfound from './Notfound';
+import Funroute from './Funroute';
+const routing = (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <NavLink exact activeClassName="active" to="/">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/users">
+            Users
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/register">
+            Register
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/mytable">
+            MyTable
+          </NavLink>
+        </li>
+        <li>
+          <NavLink activeClassName="active" to="/greeting">
+            Greeting
+          </NavLink>
+        </li>
+      </ul>
+      <br />
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route path="/users" component={Users} />
+        <Route path="/register" component={Register} />
+        <Route path="/mytable" component={Mytable} />
+        <Route path="/greeting" component={LoginForm} />
+        <Route component={Notfound} />
+      </Switch>
+    </div>
+  </Router>
+)
+
 function ActionLink() {  
   function handleClick(e) {  
       e.preventDefault();  
@@ -33,9 +81,9 @@ function ActionLink() {
   );  
 } 
 const myname = "Srinivas Ippili";
-ReactDOM.render(<div style={{  margin: 10, border: '2px solid green', padding: 20 }}>
- <App/><AllEvent/><ActionLink/>
-  </div>,
+//<div><App/></div>
+ReactDOM.render(routing
+,
   document.getElementById('srini')
 );
 

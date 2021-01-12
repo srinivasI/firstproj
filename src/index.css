@@ -13,3 +13,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* h1{
+  color:red;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+li{
+  float: left;
+  width: 100px;
+  list-style: none;
+  font-weight:bold;
+  border:2px solid green;
+  margin-right:10px;
+  text-align:center;
+}
+li a{
+  text-decoration: none;
+}
+.active{
+  background-color: lightblue;
+  color:red;
+} */
