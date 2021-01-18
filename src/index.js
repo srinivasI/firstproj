@@ -25,6 +25,9 @@ import Users from './Users';
 import List from './List';
 import Notfound from './Notfound';
 import Funroute from './Funroute';
+import Hookex1 from './Hookex1';
+import AuthExample from './AuthExample';
+import Redirectex from './Redirectex';
 const routing = (
   <Router>
     <div>
@@ -82,7 +85,7 @@ function ActionLink() {
 } 
 const myname = "Srinivas Ippili";
 //<div><App/></div>
-ReactDOM.render(routing
+ReactDOM.render(<Redirectex/>
 ,
   document.getElementById('srini')
 );

@@ -8,7 +8,7 @@ const Hookex = (props) => {
 
 const Headline = () => {
     const [greeting, setGreeting] = useState(
-        'React hook state Component!'
+        'Hello Srinivas'
     );
 
     const handleChange = event => setGreeting(event.target.value);
