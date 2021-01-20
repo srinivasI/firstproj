@@ -28,6 +28,12 @@ import Funroute from './Funroute';
 import Hookex1 from './Hookex1';
 import AuthExample from './AuthExample';
 import Redirectex from './Redirectex';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import combineReducers from './reducers';
+const store = createStore(combineReducers);
+
 const routing = (
   <Router>
     <div>
@@ -85,8 +91,9 @@ function ActionLink() {
 } 
 const myname = "Srinivas Ippili";
 //<div><App/></div>
-ReactDOM.render(<Redirectex/>
-,
+ReactDOM.render(<Provider store={store}>
+  <App />
+</Provider>,
   document.getElementById('srini')
 );
 
